@@ -1,0 +1,28 @@
+mon_book
+  projet
+    id_projet
+    nom_projet
+    description
+    annee
+    client
+    lien
+    online
+    ordre
+  techno
+    id_techno
+    nom_techno
+  projet_techno
+  general
+    id_general
+    titre
+    contenu
+  user
+    id_user
+    pseudo
+    mdp
+
+
+
+pour insérer une ligne dans le tableau projet
+
+INSERT INTO projet (titre, description, annee, client, lien, online, ordre) VALUES ('Adalib', 'Le site pour un hôpital online', '2020', 'Descodeuses', 'github cekcek', '0', '2')

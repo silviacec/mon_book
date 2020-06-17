@@ -1,0 +1,269 @@
+body{
+  font-family: Courier;
+  background-color: #99dc56;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin:auto;
+}
+
+.intro h1, .intro p {
+  color: #823131;
+  padding-top: 20px;
+  width: 400px;
+  width: 70vw;
+  text-align: center;
+  margin: auto;
+}
+
+.menu_accueil {
+    width: 400px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.menu_accueil a{
+    font-size: 1.5em;
+    display: block;
+    line-height: 2em;
+    text-decoration: none;
+}
+
+.menu_accueil a:hover{
+    background-color: #b3dc89;
+}
+
+input{
+  padding: 0.5em;
+  border: 1px solid grey;
+  border-radius: 10px;
+  line-height: 1.5em;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* nav ul:after {
+  content : '';
+  display: block;
+  clear:both;
+} */
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin-right: 20px;
+    width: 100%;
+}
+
+nav ul li{
+  margin:10px;
+}
+
+nav ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color:#000000;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.affichage_techno {
+  padding: 20px;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #dad7d7;
+}
+
+nav ul li a:hover{
+  background-color:#ccc;
+  transform: scale(1.2, 1.2);
+}
+.bouton_admin{
+  color: #ffffff;
+  background-color: #ccc;
+}
+
+.bouton_admin:hover{
+  background-color: #ffffff;
+  color: #ccc;
+}
+
+footer {
+  background:#ccc;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  /* bottom: 0;
+  position: absolute;
+  margin-top: 50px; */
+}
+
+.img_pt {
+  height: 30vh;
+  margin: 10px;
+  border-radius: 10px;
+}
+.vitrine {
+  display: flex;
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.mini_image{
+  width:150px;
+  height: auto;
+}
+
+.image_admin img{
+    margin-bottom: 2em;
+}
+
+.projets {
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.projets a{
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  background-color: #c7f9c7;
+    text-decoration: none;
+    padding:0 1em;
+    color: #444;
+}
+
+.projets a:hover{
+    text-decoration: underline;
+}
+
+.box_connect {
+    padding: 2em;
+    margin: auto;
+    border: 2px #c4c4c4 solid;
+    text-align: center;
+    width: 400px;
+}
+
+.box_connect form input{
+    padding: 0.5em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+.form  {
+    width: 500px;
+    border: #c4c4c4 solid 1px;
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.list  {
+    width: 500px;
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 2em;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.form input{
+    padding: 0.5em;
+    margin-bottom: 2em;
+    line-height: 1.5em;
+}
+
+.list li{
+  font-size: 1.2em;
+  text-align: left;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  list-style: none;
+  margin:10px;
+}
+
+.list a{
+  color: #595d59;
+}
+
+/* .erreur {
+    border: darkred 2px solid;
+    color: darkred;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.success {
+    border: darkolivegreen 2px solid;
+    color: darkolivegreen;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.main {
+    border:1px #ccc solid;
+    padding: 2em;
+}
+
+.main > h1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.field input{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.mini_image {
+    width: 200px;
+}
+
+.image_admin img{
+    margin-bottom: 2em;
+}
+
+.button {
+    border:#ccc;
+    font-size: 0.8em;
+    color:#888;
+    text-decoration: none;
+    border: 1px #888 solid;
+    padding: 2px 10px;
+} */

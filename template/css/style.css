@@ -1,0 +1,181 @@
+body{
+  font-family: Courier;
+}
+
+.container {
+  /* max-width: 1000px; */
+  width: 100%;
+  margin:auto;
+}
+
+.container h1 {
+  color: red;
+  text-align: center;
+  padding-top: 150px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  margin-right: 20px;
+  width: 100%;
+}
+
+/* nav ul:after {
+  content : '';
+  display: block;
+  clear:both;
+} */
+
+nav ul li{
+  margin:10px;
+}
+
+nav ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color:#000000;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.liste_techno ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.liste_techno ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color:#000000;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  background-color: #ccced4;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.liste_techno h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.affichage_techno {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ccced4;
+  padding: 10px;
+  height: 60px;
+  width: auto;
+}
+
+nav ul li a:hover{
+  background-color:#ccc;
+  transform: scale(1.2, 1.2);
+}
+.bouton_admin{
+  color: #ffffff;
+  background-color: #ccc;
+}
+
+.bouton_admin:hover{
+  background-color: #ffffff;
+  color: #ccc;
+}
+
+footer {
+  background:#ccc;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  /* bottom: 0;
+  position: absolute;
+  margin-top: 50px; */
+}
+
+.img_pt {
+  height: 100px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.vitrine {
+  background-color: #eff3f1;
+  display: flex;
+  width: 60vw;
+  margin: auto;
+  margin-bottom: 50px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+/* main {
+  height: 100%;
+  position: relative;
+} */
+/* .col-6 {
+  float:left;
+  box-sizing: border-box;
+  width: 30%;
+} */
+/*
+
+h1 {
+  background: #000;
+  color:#fff;
+  padding: 1em;
+  font-size: 40px;
+}
+
+main p{
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+
+
+
+.majuscule {
+  text-transform: uppercase;
+}
+
+.row:after {
+  content: ' ';
+  display: block;
+  float: none;
+  clear: both;
+}
+
+.col-6 {
+  float:left;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.col-6 img {
+  width: 100%;
+}
+
+.texte {
+  font-size: 13px;
+  line-height: 20px;
+} */
