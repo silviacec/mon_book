@@ -25,7 +25,7 @@ if(!empty($_POST)) {
 
 
         $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base.
-        ajouterSuccess("Vous avez ajouté un nouveau projet $projetID");
+        ajouterSuccess("Vous avez ajouté un nouveau projet");
 
 
     } else {// un id est envoyé alors je modifie un enregistrement.
@@ -61,5 +61,5 @@ if(!empty($_FILES)) {
     enregistrerFichier($_FILES["imageProjet"], "template/img/$projetID.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
 }
 
-var_dump($_POST);
-// changeDePage(URL_SITE . "admin/admin_projets/projets_liste_admin.php");
+
+changeDePage(URL_SITE . "admin/admin_projets/projets_liste_admin.php");

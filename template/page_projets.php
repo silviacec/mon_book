@@ -74,7 +74,7 @@
     <div class="liste_techno">
       <h3>Ou selectionnez une technologie pour voir les projets</h3>
       <ul>
-        
+
         <?php foreach( tousLesTechno() as $techno ) {
             echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
             echo "<li>";
