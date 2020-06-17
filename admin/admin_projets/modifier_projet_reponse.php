@@ -36,7 +36,7 @@ if(!empty($_POST)) {
                                   annee = :annee,
                                   client = :client,
                                   lien = :lien,
-                                  ordre = :ordre,
+                                  ordre = :ordre
                                   WHERE id_projet = :idProjet");
 
         $query -> execute(
@@ -50,7 +50,7 @@ if(!empty($_POST)) {
               ":idProjet" => $_POST["id_projet"],
             ]
         );
-var_dump($bdd->errorinfo());
+var_dump($query->errorinfo());
         $projetID = $_POST["id_projet"];
 
         ajouterSuccess("Vous avez modifié le projet");
