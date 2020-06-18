@@ -50,15 +50,18 @@ if(!empty($_POST)) {
               ":idProjet" => $_POST["id_projet"],
             ]
         );
-var_dump($query->errorinfo());
+// var_dump($query->errorinfo());
         $projetID = $_POST["id_projet"];
 
         ajouterSuccess("Vous avez modifié le projet");
     }
 }
-
+//ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageProjet"], "template/img/$projetID.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
+    enregistrerFichier($_FILES["imageProjet_1"], "template/img/$projetID._1.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
+    enregistrerFichier($_FILES["imageProjet_2"], "template/img/$projetID._2.jpg");
+    enregistrerFichier($_FILES["imageProjet_3"], "template/img/$projetID._3.jpg");
+
 }
 
 

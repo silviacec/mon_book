@@ -66,15 +66,20 @@ if(!empty($_GET["projetAAfficher"])) {
 
       <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
       <div class="image_admin">
-      <?php
-      if(!empty($_GET["projetAAfficher"])) {
-          echo html_image("image/menu/$_GET[projetAAfficher].jpg", "mini_image");
-          }
+
+      <?php // ce truc devrait afficher la foto par défaut mais ne marche pas...(il faudrait que toutes les photos s'appellent avec leur id_projet)
+      // if(!empty($_GET["projetAAfficher"])) {
+      //     echo html_image("image/menu/$_GET[projetAAfficher].png", "mini_image");
+      //     }
       ?>
-
-
       <div>
-      Image du projet : <input name="imageProjet" type="file"  accept="image/jpeg, image/png" />
+      Image du projet : <input name="imageProjet_1" type="file"  accept="image/jpeg, image/png" />
+      </div>
+      <div>
+      Image du projet : <input name="imageProjet_2" type="file"  accept="image/jpeg, image/png" />
+      </div>
+      <div>
+      Image du projet : <input name="imageProjet_3" type="file"  accept="image/jpeg, image/png" />
       </div>
   </div>
 

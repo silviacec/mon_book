@@ -4,9 +4,23 @@
 
   include "fonctions.php";
 
-  echo "<h1>$projetAAfficher[nom_projet]</h1>";
 
-  echo html_image("$projetAAfficher[url_image]", "img_pt");
+
+  echo "<h1>$projetAAfficher[nom_projet]</h1>";
+// var_dump($projetAAfficher);
+
+foreach ($projetAAfficher as $id_projet) {
+  echo html_image("template/img/$id_projet._1.jpg", "img_pt");
+  echo html_image("template/img/$id_projet._2.jpg", "img_pt");
+  echo html_image("template/img/$id_projet._3.jpg", "img_pt");
+}
+
+var_dump($projetAAfficher);
+  // if($projetAAfficher = "1"){
+  //   echo html_image("template/img/1._1.jpg", "img_pt");
+  //   echo html_image("template/img/1._2.jpg", "img_pt");
+  //   echo html_image("template/img/1._3.jpg", "img_pt");
+  // }
 
   foreach ($technoAAfficher as $key => $techno) {
     echo "<div>$techno[nom_techno]<div>";

@@ -105,6 +105,24 @@
       }
   }
 
+  function verifierCheminFichier($chemin) {
+
+          $arrChemin = explode("/", $chemin); // Dans PHP, scinde une chaîne de caractères en segments
+
+          $verifChemin = PATH_SITE;
+          foreach ($arrChemin as $dossier) {
+              if(!strstr($dossier, ".")) { //Dans PHP, Trouve la première occurrence dans une chaîne
+                  // si il n'y a pas de point dans le nom du dossier, c'est qu'il s'agit d'un dossier
+                  // (sinon, c'est un fichier)
+                  $verifChemin .= $dossier ."/";
+                  // var_dump($verifChemin);
+                  if(!is_dir($verifChemin)) { // ce n'est pas un dossier, il faut le créer
+                      mkdir($verifChemin);
+                  }
+              }
+          }
+  }
+
   function enregistrerFichier($fichier, $destination) { //sert pour les images à ajouter dans les différents formulaires de l'admin
 
     if($fichier["error"] == UPLOAD_ERR_OK || $fichier["error"] == UPLOAD_ERR_NO_FILE) {
@@ -116,27 +134,11 @@
           move_uploaded_file($fichier["tmp_name"], PATH_SITE . $destination); //Dans PHP, déplace un fichier téléchargé
       }
         } else {
-            ajouterErreur("Un fichier n'a pas été enregistré.");
+            ajouterErreur("Le fichier n'a pas été enregistré.");
         }
 }
 
-function verifierCheminFichier($chemin) {
 
-        $arrChemin = explode("/", $chemin); // Dans PHP, scinde une chaîne de caractères en segments
-
-        $verifChemin = PATH_SITE;
-        foreach ($arrChemin as $dossier) {
-            if(!strstr($dossier, ".")) { //Dans PHP, Trouve la première occurrence dans une chaîne
-                // si il n'y a pas de point dans le nom du dossier, c'est qu'il s'agit d'un dossier
-                // (sinon, c'est un fichier)
-                $verifChemin .= $dossier ."/";
-                // var_dump($verifChemin);
-                if(!is_dir($verifChemin)) { // ce n'est pas un dossier, alors nous allons le créer.
-                    mkdir($verifChemin);
-                }
-            }
-        }
-}
 
 function echoKey($tableau, $cle, $valeurDefaut = "") {
         // ecrit la valeur de la case clé de mon tableau.
