@@ -70,7 +70,7 @@
       <ul>
 
         <?php foreach( tousLesTechno() as $techno ) {
-            // echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
+            echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
             echo "<li>";
             echo html_a($techno["nom_techno"], "template/techno_reponse.php?technoAAfficher=$techno[id_techno]");
             echo "</li>";

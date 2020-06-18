@@ -6,8 +6,8 @@ include "include/header.php";
 
 include "../fonctions.php";
 
-
-
+$nom_techno = $bdd -> query("select nom_techno from techno where id_techno=$_GET[technoAAfficher]")->fetch();
+echo $nom_techno["nom_techno"];
 
 function afficheProjetParTechno() {
 
@@ -15,7 +15,7 @@ function afficheProjetParTechno() {
   $technoAAfficher = $bdd -> query("select * from projet, techno, projet_techno where projet_techno.techno_id=$_GET[technoAAfficher] and projet_techno.techno_id = techno.id_techno and projet_techno.projet_id=projet.id_projet") -> fetchAll(PDO::FETCH_ASSOC);
 
 
-  return $technoAAfficher;
+  return $technoAAfficher ;
 }
 
 
@@ -29,9 +29,5 @@ foreach(afficheProjetParTechno() as $projetDeCetteTechno) {
 
   echo "</div>";
 }
-// foreach(afficheProjetParTechno() as $technoAAfficher["nom_projet"]) {
-//
-//   echo "<div class='vitrine'>";
-//   echo $technoAAfficher["nom_projet"];
-//   echo "</div>";
-// }
+
+ include "include/footer.php"; 
