@@ -8,7 +8,7 @@
 
   echo "<h1>$projetAAfficher[nom_projet]</h1>";
 // var_dump($projetAAfficher);
-
+echo html_image("template/img/$id_projet._1.jpg", "img_pt");
 foreach ($projetAAfficher as $id_projet) {
   echo html_image("template/img/$id_projet._1.jpg", "img_pt");
   echo html_image("template/img/$id_projet._2.jpg", "img_pt");

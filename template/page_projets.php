@@ -14,7 +14,7 @@
   function tousLesTechno() {
 
       global $bdd;
-      return $bdd -> query("select nom_techno from techno order by id_techno") ->
+      return $bdd -> query("select nom_techno, id_techno from techno order by id_techno") ->
       fetchAll(PDO::FETCH_ASSOC);
 
   }
@@ -53,19 +53,13 @@
           echo "<div class='vitrine'><h2>";
           echo html_a($projet["nom_projet"], URL_SITE . "projet_seul.php?projetAAfficher=$projet[id_projet]");
 
-          echo "</h2><div class='affichage_techno'>$projet[technos]</div>";
+          echo "</h2><div class='aff  ichage_techno'>$projet[technos]</div>";
 
           echo html_image("$projet[url_image]", "img_pt");
 
           echo "</div>";
         }
 
-      //   <?php foreach( tousLesMenus() as $menu ) {
-      //     echo "<li>";
-      //     echo );
-      //     echo "</li>";
-      // }
-      // ?>
 
         ?>
         <form class="" action="index.html" >
@@ -76,11 +70,12 @@
       <ul>
 
         <?php foreach( tousLesTechno() as $techno ) {
-            echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
+            // echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
             echo "<li>";
-            echo html_a($techno["nom_techno"]);
+            echo html_a($techno["nom_techno"], "template/techno_reponse.php?technoAAfficher=$techno[id_techno]");
             echo "</li>";
         }
+
         ?>
       </ul>
     </div>
