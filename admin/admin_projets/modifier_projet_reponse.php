@@ -12,7 +12,7 @@ if(!empty($_POST)) {
 
   if($_POST["id_projet"] == 0) {
 
-    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, annee, client, lien, ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :ordre)");
+    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, annee, client, lien, online ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :online, :ordre)");
     $query -> execute([
         ":nom_projet" => $_POST["nom_projet"],
         ":description" =>  $_POST["description"],
@@ -20,6 +20,7 @@ if(!empty($_POST)) {
         ":annee" => $_POST["annee"],
         ":client" =>  $_POST["client"],
         ":lien" =>  $_POST["lien"],
+        ":online" => $_POST["online"],
         ":ordre" =>  $_POST["ordre"],
         ]);
 
@@ -48,6 +49,7 @@ if(!empty($_POST)) {
                                   annee = :annee,
                                   client = :client,
                                   lien = :lien,
+                                  online = :online,
                                   ordre = :ordre
                                   WHERE id_projet = :idProjet");
 
@@ -58,6 +60,7 @@ if(!empty($_POST)) {
               ":annee" => $_POST["annee"],
               ":client" =>  $_POST["client"],
               ":lien" =>  $_POST["lien"],
+              ":online" => $_POST["online"],
               ":ordre" =>  $_POST["ordre"],
               ":idProjet" => $_POST["id_projet"],
             ]

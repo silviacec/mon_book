@@ -68,10 +68,10 @@ if(!empty($_GET["projetAAfficher"])) {
           Lien du site : <input name="lien" placeholder="Lien" type="text"  value="<?php echoKey($projetAModifier, "lien")?>">
       </div>
 
-      <!-- <div class="field">
-        <input type="radio" name="online" value="<?php echoKey($projetAModifier, "online") ?>">Projet online
-        <input type="radio" name="online" value="<?php echoKey($projetAModifier, "online") ?>"> Projet pas encore online
-      </div> -->
+      <div class="field">
+        <input type="radio" name="online" value="1">Projet online
+        <input type="radio" name="online" value="0">Projet pas encore online
+      </div>
 
       <div class="field">
           Ordre d'affichage <input name="ordre" placeholder="Ordre" type="number"  value="<?php echoKey($projetAModifier, "ordre")?>">

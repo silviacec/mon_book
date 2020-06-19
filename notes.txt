@@ -21,8 +21,12 @@ mon_book
     pseudo
     mdp
 
-
-
-pour insérer une ligne dans le tableau projet
-
-INSERT INTO projet (titre, description, annee, client, lien, online, ordre) VALUES ('Adalib', 'Le site pour un hôpital online', '2020', 'Descodeuses', 'github cekcek', '0', '2')
+- corriger pb affichage de projet seul
+- revoir ajout de technos qui foire j'ai l'impression pour les modif
+- revoir affichage d'images des projets
+- ajouter partie admin connexion avec user et mdp
+  - cripter le mdp
+- corriger problème chemin à partir de l'affichage des projets par technos
+- créer option pour ajouter une nouvelle techno à partir de l'admin
+      - idéalement, si online est coché le champ site apparait et ajoute une entree de la ligne
+      - revoir toute la mise en page !!
