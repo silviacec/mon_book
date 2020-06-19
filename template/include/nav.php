@@ -5,7 +5,7 @@
             <a href="index.php">Home</a>
       </li>
       <li>
-            <a href="projets_tous.php">Mes projets</a>
+            <a href="projets_tous.php">Tous mes projets</a>
       </li>
       <li>
             <a href="contact.php">Contact</a>
