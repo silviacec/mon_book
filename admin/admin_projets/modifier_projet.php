@@ -39,7 +39,7 @@ if(!empty($_GET["projetAAfficher"])) {
           Description : <textarea name="description" placeholder="Description" type="text"><?php echoKey($projetAModifier, "description")  ?></textarea>
       </div>
 
-<!-- ici boucle foreach pour afficher les technos et leur donner une valeur GET -->
+<!-- ici boucle foreach pour afficher les technos et leur donner un paramètre d'url GET -->
 
       <?php
 

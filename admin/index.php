@@ -21,7 +21,7 @@ show_success();
         <a href="<?php echo URL_SITE ?>" target="_blank">Aller au site</a>
         <a href="<?php echo URL_SITE ?>admin/admin_accueil/modifier_accueil.php">Page d'accueil</a>
         <a href="<?php echo URL_SITE ?>admin/admin_projets/projets_liste_admin.php">Projets</a>
-        <a href="<?php echo URL_SITE ?>admin/admin_user/modifier_user.php">Utilisateurs</a>
+        <a href="<?php echo URL_SITE ?>admin/admin_user/user_liste.php">Utilisateurs</a>
         <a href="<?php echo URL_SITE ?>admin/deconnexion.php">Se déconnecter</a>
     </div>
 

@@ -28,5 +28,4 @@ mon_book
   - cripter le mdp
 - corriger problème chemin à partir de l'affichage des projets par technos
 - créer option pour ajouter une nouvelle techno à partir de l'admin
-      - idéalement, si online est coché le champ site apparait et ajoute une entree de la ligne
       - revoir toute la mise en page !!
