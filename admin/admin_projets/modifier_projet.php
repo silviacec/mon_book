@@ -36,8 +36,21 @@ if(!empty($_GET["projetAAfficher"])) {
       </div>
 
       <div class="field">
-          Description : <input name="description" placeholder="Description" type="text" value="<?php echoKey($projetAModifier, "description")  ?>">
+          Description : <textarea name="description" placeholder="Description" type="text"><?php echoKey($projetAModifier, "description")  ?></textarea>
       </div>
+
+<!-- ici boucle foreach pour afficher les technos et leur donner une valeur GET -->
+
+      <?php
+
+      $technoACocher = $bdd -> query("select * from techno") -> fetchAll();
+      foreach ($technoACocher as $key => $techno){
+
+        echo $techno["nom_techno"];
+        echo "<input type='checkbox' name='techno[]' value='$techno[id_techno]'/>";
+      }
+
+      ?>
 
       <div class="field">
           Adresse de l'image : <input name="url_image" placeholder="Url de l'image" type="text" value="<?php echoKey($projetAModifier, "url_image")?>">

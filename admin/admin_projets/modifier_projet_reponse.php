@@ -23,8 +23,20 @@ if(!empty($_POST)) {
         ":ordre" =>  $_POST["ordre"],
         ]);
 
-
         $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base.
+///ajoute dans table jointure toute les technos du $projetID --> à mettre aussi plus bas dans le modifier
+
+
+        foreach ($_POST["techno"] as $key => $chaqueTechno) {
+          $query = $bdd -> prepare("INSERT into projet_techno (techno_id, projet_id) VALUES (:techno_id, :projet_id)");
+          $query -> execute ([
+            ":techno_id" => $chaqueTechno,
+            ":projet_id" => $projetID,
+
+          ]);
+        }
+
+
         ajouterSuccess("Vous avez ajouté un nouveau projet");
 
 
@@ -53,6 +65,17 @@ if(!empty($_POST)) {
 // var_dump($query->errorinfo());
         $projetID = $_POST["id_projet"];
 
+        //effacer dans table de jointure techno_id where projet_id = $projetID
+        $query = $bdd -> query("DELETE FROM projet_techno WHERE projet_id = $projetID");
+
+        foreach ($_POST["techno"] as $key => $chaqueTechno) {
+          $query = $bdd -> prepare("INSERT into projet_techno (techno_id, projet_id) VALUES (:techno_id, :projet_id)");
+          $query -> execute ([
+            ":techno_id" => $chaqueTechno,
+            ":projet_id" => $projetID,
+
+          ]);
+        }
         ajouterSuccess("Vous avez modifié le projet");
     }
 }
