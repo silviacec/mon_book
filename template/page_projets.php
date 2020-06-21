@@ -24,7 +24,7 @@
 
   <main class="page_projets">
 
-    <aside class="liste_techno">
+    <div class="liste_techno">
       <h3>Choix des projets par techno</h3>
 
       <ul>
@@ -36,7 +36,7 @@
         }
         ?>
       </ul>
-    </aside>
+    </div>
 
     <div class="container_w_aside">
 
@@ -53,7 +53,6 @@
 
         echo "</div>";
       }
-
 
       ?>
 
