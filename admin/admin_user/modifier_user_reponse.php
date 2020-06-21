@@ -33,10 +33,11 @@ if(!empty($_POST)) {
         $query -> execute(
             [ ":identifiant" => $_POST["identifiant"],
               ":mdp" =>  $_POST["mdp"],
+              ":idUser" => $_POST["id_user"]
             ]
         );
 
-var_dump($query->errorinfo());
+// var_dump($query->errorinfo());
         $userID = $_POST["id_user"];
 
         ajouterSuccess("Vous avez modifié ce compte utilisateur");
