@@ -197,3 +197,50 @@ footer {
   margin-top: 4em;
   margin-bottom: 4em;
 }
+
+.un_projet {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.un_projet h1 {
+  font-size: 3em;
+}
+
+.one {
+  font-size: 1,5em;
+  background-color: #adadad;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.two {
+  font-size: 1.5em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #c2c2c2;
+}
+
+.three {
+  font-size: 1.5em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #d6d6d6;
+}
+
+.four {
+  font-size: 1.5em;
+  border: 1px solid grey ;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+}
