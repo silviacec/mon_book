@@ -51,5 +51,3 @@ $tableUser = $bdd -> query("SELECT * FROM user")-> fetchAll();?>
   ?>
 
 </table>
-
-<?php include "../../template/include/footer.php";

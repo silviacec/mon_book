@@ -12,13 +12,13 @@ if(!empty($_POST)) {
 
   if($_POST["id_projet"] == 0) {
 
-    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, image_2, image_3, annee, client, lien, online ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :online, :ordre)");
+    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, annee, client, lien, online ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :online, :ordre)");
     $query -> execute([
         ":nom_projet" => $_POST["nom_projet"],
         ":description" =>  $_POST["description"],
         ":url_image" =>  $_POST["url_image"],
-        ":image_2" =>  $_POST["image_2"],
-        ":image_3" =>  $_POST["image_3"],
+        // ":image_2" =>  $_POST["image_2"],
+        // ":image_3" =>  $_POST["image_3"],
         ":annee" => $_POST["annee"],
         ":client" =>  $_POST["client"],
         ":lien" =>  $_POST["lien"],
@@ -48,8 +48,8 @@ if(!empty($_POST)) {
                                   nom_projet = :nom_projet,
                                   description = :description,
                                   url_image = :url_image,
-                                  image_2 = :image_2,
-                                  image_3 = :image_3,
+                                  -- image_2 = :image_2,
+                                  -- image_3 = :image_3,
                                   annee = :annee,
                                   client = :client,
                                   lien = :lien,
@@ -61,8 +61,8 @@ if(!empty($_POST)) {
             [ ":nom_projet" => $_POST["nom_projet"],
               ":description" =>  $_POST["description"],
               ":url_image" =>  $_POST["url_image"],
-              ":image_2" =>  $_POST["image_2"],
-              ":image_3" =>  $_POST["image_3"],
+              // ":image_2" =>  $_POST["image_2"],
+              // ":image_3" =>  $_POST["image_3"],
               ":annee" => $_POST["annee"],
               ":client" =>  $_POST["client"],
               ":lien" =>  $_POST["lien"],
@@ -90,9 +90,9 @@ if(!empty($_POST)) {
 }
 //ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["imageProjet_1"], "template/img/$projetID._1.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
-    enregistrerFichier($_FILES["imageProjet_2"], "template/img/$projetID._2.jpg");
-    enregistrerFichier($_FILES["imageProjet_3"], "template/img/$projetID._3.jpg");
+    enregistrerFichier($_FILES["url_image"], "template/img/$projetID._1.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
+    // enregistrerFichier($_FILES["imageProjet_2"], "template/img/$projetID._2.jpg");
+    // enregistrerFichier($_FILES["imageProjet_3"], "template/img/$projetID._3.jpg");
 
 }
 

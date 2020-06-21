@@ -32,4 +32,4 @@ show_success();
 
 <?php
 
-include PATH_TEMPLATE . "include/footer.php";
+// include PATH_TEMPLATE . "include/footer.php";

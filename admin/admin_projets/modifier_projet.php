@@ -88,12 +88,12 @@ if(!empty($_GET["projetAAfficher"])) {
       <div>
       Image du projet : <input name="url_image" type="file"  accept="image/jpeg, image/png" />
       </div>
-      <div>
+      <!-- <div>
       Image du projet : <input name="image_2" type="file"  accept="image/jpeg, image/png" />
       </div>
       <div>
       Image du projet : <input name="image_3" type="file"  accept="image/jpeg, image/png" />
-      </div>
+      </div> -->
   </div>
 
       <input type="submit" value="Envoyer" />
