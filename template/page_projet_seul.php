@@ -13,7 +13,7 @@
 
 
 
-foreach ($projetAAfficher as $key => $id_projet) {
+foreach ($projetAAfficher $id_projet) {
   echo html_image("template/img/$id_projet._1.jpg", "img_pt");
   echo html_image("template/img/$id_projet._2.jpg", "img_pt");
   echo html_image("template/img/$id_projet._3.jpg", "img_pt");

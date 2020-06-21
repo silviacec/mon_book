@@ -81,18 +81,18 @@ if(!empty($_GET["projetAAfficher"])) {
       <div class="image_admin">
 
       <?php // ce truc devrait afficher la foto par défaut mais ne marche pas...(il faudrait que toutes les photos s'appellent avec leur id_projet)
-      // if(!empty($_GET["projetAAfficher"])) {
-      //     echo html_image("image/menu/$_GET[projetAAfficher].png", "mini_image");
-      //     }
+      if(!empty($_GET["projetAAfficher"])) {
+          echo html_image("../../template/img/$_GET[projetAAfficher]._1.jpg", "mini_image");
+          }
       ?>
       <div>
-      Image du projet : <input name="imageProjet_1" type="file"  accept="image/jpeg, image/png" />
+      Image du projet : <input name="url_image" type="file"  accept="image/jpeg, image/png" />
       </div>
       <div>
-      Image du projet : <input name="imageProjet_2" type="file"  accept="image/jpeg, image/png" />
+      Image du projet : <input name="image_2" type="file"  accept="image/jpeg, image/png" />
       </div>
       <div>
-      Image du projet : <input name="imageProjet_3" type="file"  accept="image/jpeg, image/png" />
+      Image du projet : <input name="image_3" type="file"  accept="image/jpeg, image/png" />
       </div>
   </div>
 

@@ -12,11 +12,13 @@ if(!empty($_POST)) {
 
   if($_POST["id_projet"] == 0) {
 
-    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, annee, client, lien, online ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :online, :ordre)");
+    $query = $bdd -> prepare ("INSERT INTO projet (nom_projet, description, url_image, image_2, image_3, annee, client, lien, online ordre) VALUES (:nom_projet, :description, :url_image, :annee, :client, :lien, :online, :ordre)");
     $query -> execute([
         ":nom_projet" => $_POST["nom_projet"],
         ":description" =>  $_POST["description"],
         ":url_image" =>  $_POST["url_image"],
+        ":image_2" =>  $_POST["image_2"],
+        ":image_3" =>  $_POST["image_3"],
         ":annee" => $_POST["annee"],
         ":client" =>  $_POST["client"],
         ":lien" =>  $_POST["lien"],
@@ -38,7 +40,7 @@ if(!empty($_POST)) {
         }
 
 
-        ajouterSuccess("Vous avez ajouté un nouveau projet");
+        ajouterSuccess("Vous avez ajouté un nouveau projet $projetID");
 
 
     } else {// un id est envoyé alors je modifie un enregistrement.
@@ -46,6 +48,8 @@ if(!empty($_POST)) {
                                   nom_projet = :nom_projet,
                                   description = :description,
                                   url_image = :url_image,
+                                  image_2 = :image_2,
+                                  image_3 = :image_3,
                                   annee = :annee,
                                   client = :client,
                                   lien = :lien,
@@ -57,6 +61,8 @@ if(!empty($_POST)) {
             [ ":nom_projet" => $_POST["nom_projet"],
               ":description" =>  $_POST["description"],
               ":url_image" =>  $_POST["url_image"],
+              ":image_2" =>  $_POST["image_2"],
+              ":image_3" =>  $_POST["image_3"],
               ":annee" => $_POST["annee"],
               ":client" =>  $_POST["client"],
               ":lien" =>  $_POST["lien"],
@@ -79,7 +85,7 @@ if(!empty($_POST)) {
 
           ]);
         }
-        ajouterSuccess("Vous avez modifié le projet");
+        ajouterSuccess("Vous avez modifié le projet  $projetID");
     }
 }
 //ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet

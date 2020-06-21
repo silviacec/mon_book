@@ -25,7 +25,7 @@
   <main class="page_projets">
 
     <aside class="liste_techno">
-      <h3>Ou selectionnez une technologie pour voir les projets</h3>
+      <h3>Choix des projets par techno</h3>
 
       <ul>
         <?php foreach( tousLesTechno() as $techno ) {

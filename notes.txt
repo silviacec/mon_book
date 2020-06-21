@@ -4,12 +4,10 @@ A CORRIGER
 * page projets - les projets ne s'affichent plus. Je ne comprends pas pourquoi... même chose sur les projets par techno.
 * projet_seul.php - les images et les technos ne s'affichent pas. Le pb est lié au précédent
 * admin - impossible de insérer un nouveau projet, j'ai bricolé un truc avec les url des images, mais je crois que ce n'est pas bon et que ça fait foirer tout le reste
-* admin - impossible de modifier user (alors que nouveau user marche)
 
 A FAIRE
 
 - indenter correctement les fichiers
-- ajout de technos avec formulaire admin
 - affichage d'images des projets
 - cripter le mdp sur la bdd et du coup dans le tableau d'affichage
 - mise en page

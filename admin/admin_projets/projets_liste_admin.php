@@ -30,7 +30,7 @@ show_success();
                 $lienModifier = html_a("Modifier", URL_SITE . "admin/admin_projets/modifier_projet.php?projetAAfficher=$result[id_projet]");
                 $lienSupprimer = html_a("Supprimer", URL_SITE . "admin/admin_projets/projet_supprimer.php?projetASupprimer=$result[id_projet]", "alert", "Êtes-vous sûr de vouloir effacer ce projet ?");
 
-                echo "<li>$result[nom_projet] ( $lienModifier | $lienSupprimer)</li>";
+                echo "<li>$result[nom_projet] $lienModifier | $lienSupprimer</li>";
 
             }
 
