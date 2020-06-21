@@ -1,17 +1,26 @@
 body{
   font-family: Courier;
+  background-color: #f6f3fa;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ded4ed' fill-opacity='0.81' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .container {
   /* max-width: 1000px; */
-  width: 100%;
+  flex:1;
   margin:auto;
+  overflow: auto;
 }
 
 .container h1 {
-  color: red;
+  color: #a4a7a5;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 50px;
+}
+
+.container p {
+    width: 80vw;
+    text-align: justify;
+    margin: auto;
 }
 
 nav ul {
@@ -45,13 +54,19 @@ nav ul li a{
   transition-duration: 0.2s;
 }
 
+.page_accueil {
+  display: flex;
+}
+aside {
+  width: 20%;
+}
+.liste_techno {
+  margin: 3em 2em 0 2em;
+}
 .liste_techno ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .liste_techno ul li a{
@@ -64,6 +79,7 @@ nav ul li a{
   background-color: #ccced4;
   transition-property: transform;
   transition-duration: 0.2s;
+  margin: 5px 0 5px 0;
 }
 
 .liste_techno h3{
@@ -82,6 +98,39 @@ nav ul li a{
   width: auto;
 }
 
+.titre_zoom {
+  text-align: center;
+  margin-bottom: 2em;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+  }
+
 nav ul li a:hover{
   background-color:#ccc;
   transform: scale(1.2, 1.2);
@@ -97,13 +146,21 @@ nav ul li a:hover{
 }
 
 footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background:#ccc;
   padding: 10px;
   text-align: center;
   width: 100%;
-  /* bottom: 0;
-  position: absolute;
-  margin-top: 50px; */
+  margin-top: 5em;
+}
+
+.social i {
+  color: grey;
+}
+.social i:hover{
+  color: darkgrey;
 }
 
 .img_pt {
@@ -113,7 +170,7 @@ footer {
 }
 
 .vitrine {
-  background-color: #eff3f1;
+  background-color: #fffffa;
   display: flex;
   width: 60vw;
   margin: auto;
@@ -142,10 +199,6 @@ h1 {
   font-size: 40px;
 }
 
-main p{
-  line-height: 1.5em;
-  font-size: 1.5em;
-}
 
 
 

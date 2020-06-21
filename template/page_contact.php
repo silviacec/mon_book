@@ -7,7 +7,7 @@ include "fonctions.php";
 ?>
 
   <main>
-        <div class="container">
+        <div class="vitrine">
             <h1><?php echo MontrerContenu("TITRE_CONTACT")?></h1>
             <div class="row">
                 <div class="col-6">

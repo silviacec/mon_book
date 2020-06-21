@@ -4,7 +4,7 @@
     include "../fonctions.php";
 
 
-if(empty($_POST["pseudo"]) || empty($_POST["mdp"])) {
+if(empty($_POST["identifiant"]) || empty($_POST["mdp"])) {
 
     ajouterErreur("Merci de vous connecter");
 
@@ -16,7 +16,7 @@ if(empty($_POST["pseudo"]) || empty($_POST["mdp"])) {
 
       $query -> execute(
         array(
-          ":idUserStr" => $_POST["pseudo"],
+          ":idUserStr" => $_POST["identifiant"],
           ":motDePasse" => $_POST["mdp"],
         )
       );

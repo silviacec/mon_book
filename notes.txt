@@ -1,31 +1,19 @@
-mon_book
-  projet
-    id_projet
-    nom_projet
-    description
-    annee
-    client
-    lien
-    online
-    ordre
-  techno
-    id_techno
-    nom_techno
-  projet_techno
-  general
-    id_general
-    titre
-    contenu
-  user
-    id_user
-    pseudo
-    mdp
+A CORRIGER
 
-- corriger pb affichage de projet seul
-- revoir ajout de technos qui foire j'ai l'impression pour les modif
-- revoir affichage d'images des projets
-- ajouter partie admin connexion avec user et mdp
-  - cripter le mdp
-- corriger problème chemin à partir de l'affichage des projets par technos
-- créer option pour ajouter une nouvelle techno à partir de l'admin
-      - revoir toute la mise en page !!
+* principal - erreur /projet_seul.php
+* admin - impossible de insérer un nouveau projet
+* admin - impossible de modifier user (alors que nouveau user marche)
+
+A FAIRE
+
+- indenter correctement les fichiers
+- ajout de technos avec formulaire admin
+- affichage d'images des projets
+- cripter le mdp sur la bdd et du coup dans le tableau d'affichage
+- mise en page
+- changer liens des icones
+
+A SIGNALER
+
+- la photo de l'accueil change correctement mais parfois il faut vider le cache pour voir la nouvelle photo
+- j'ai voulu faire un template de la page qui affiche les projets par techno, mais je me suis emmelée les pinceaux avec le chemin et la nav restait bloquée dans la partie template. 
