@@ -22,6 +22,7 @@ show_success();
         <a href="<?php echo URL_SITE ?>admin/admin_accueil/modifier_accueil.php">Page d'accueil</a>
         <a href="<?php echo URL_SITE ?>admin/admin_projets/projets_liste_admin.php">Projets</a>
         <a href="<?php echo URL_SITE ?>admin/admin_user/user_liste.php">Utilisateurs</a>
+        <a href="<?php echo URL_SITE ?>admin/admin_techno/techno_liste_ajout.php">Techno</a>
         <a href="<?php echo URL_SITE ?>admin/deconnexion.php">Se déconnecter</a>
     </div>
 
