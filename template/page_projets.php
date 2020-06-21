@@ -3,6 +3,7 @@
   include "include/header.php";
   include "fonctions.php";
 
+
   function tousLesProjets() {
 
       global $bdd;
@@ -37,7 +38,7 @@
       </ul>
     </aside>
 
-    <div class="">
+    <div class="container_w_aside">
 
       <h1>Mes projets</h1>
 
@@ -57,6 +58,6 @@
       ?>
 
   </div>
-
+</main>
 
   <?php include "template/include/footer.php"; ?>

@@ -87,10 +87,13 @@ nav ul li a{
   flex:1;
   margin:auto;
   overflow: auto;
+  color: #a4a7a5;
+  text-align: center;
+  padding-top: 50px;
 }
 
 aside {
-  width: 20%;
+  width: 30%;
 }
 .liste_techno {
   margin: 3em 2em 0 2em;
