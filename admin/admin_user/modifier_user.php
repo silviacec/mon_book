@@ -10,7 +10,8 @@ proteger_page();
 
 if(!empty($_GET["userAAfficher"])) {
 
-    $userAModifier = $bdd -> query("SELECT * from user where id_user = " . $_GET["userAAfficher"]) -> fetch();
+  $userAModifier = $bdd -> query("SELECT * from user where id_user = " . $_GET["userAAfficher"]) -> fetch();
+
 } else {
     $userAModifier = [];
 }
@@ -18,7 +19,7 @@ if(!empty($_GET["userAAfficher"])) {
   show_error();
   show_success();
 
-  ?>
+?>
 
   <div class="form">
 
@@ -33,16 +34,14 @@ if(!empty($_GET["userAAfficher"])) {
       <div class="field">
           Mot de passe<input name="mdp" placeholder="Password" type="text" value="<?php echoKey($userAModifier, "mdp")  ?>">
       </div>
-
-  </div>
-
       <input type="submit" value="Envoyer" />
-
-      <a href="<?php echo URL_SITE ?>admin/index.php" class="button">Revenir à l'accueil</a>
-
+  </div>
   </form>
 
-</div>
+  <div class="projets">
+      <a href="<?php echo URL_SITE ?>admin/index.php" class="button">Revenir à l'accueil</a>
+  </div>
 
 <?php
+
  include "../../template/include/footer.php";

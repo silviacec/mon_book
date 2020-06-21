@@ -4,19 +4,40 @@ body{
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ded4ed' fill-opacity='0.81' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.container {
-  /* max-width: 1000px; */
-  flex:1;
-  margin:auto;
-  overflow: auto;
-}
 
 .container h1 {
   color: #a4a7a5;
   text-align: center;
   padding-top: 50px;
 }
-
+.titre_zoom {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+  @-webkit-keyframes zoomIn {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  50% {
+  opacity: 1;
+  }
+}
+  @keyframes zoomIn {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  50% {
+  opacity: 1;
+  }
+}
 .container p {
     width: 80vw;
     text-align: justify;
@@ -57,12 +78,24 @@ nav ul li a{
 .page_accueil {
   display: flex;
 }
+
+.page_projets {
+  display: flex;
+}
+
+.container_w_aside{
+  flex:1;
+  margin:auto;
+  overflow: auto;
+}
+
 aside {
   width: 20%;
 }
 .liste_techno {
   margin: 3em 2em 0 2em;
 }
+
 .liste_techno ul {
   list-style: none;
   padding: 0;
@@ -179,6 +212,11 @@ footer {
   border-radius: 5px;
   padding: 10px;
   justify-content: space-evenly;
+}
+
+.page_contact {
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 /* main {

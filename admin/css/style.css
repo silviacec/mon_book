@@ -103,6 +103,7 @@ footer {
   padding: 10px;
   text-align: center;
   width: 100%;
+  margin-top: 100px;
   /* bottom: 0;
   position: absolute;
   margin-top: 50px; */
@@ -215,6 +216,19 @@ footer {
   color: #595d59;
 }
 
+table {
+  margin: auto;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+thead {
+  font-weight: bold;
+}
+
+td {
+  padding: 5px;
+}
 /* .erreur {
     border: darkred 2px solid;
     color: darkred;

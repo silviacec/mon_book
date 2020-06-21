@@ -9,15 +9,11 @@ proteger_page();
 
 ?>
 
-<div>
-    <a href="<?php echo URL_SITE ?>admin/index.php">Retour à l'accueil</a>
-    <a href="<?php echo URL_SITE ?>admin/admin_user/modifier_user.php">Ajouter un compte utilisateur</a>
+<div class="projets"> <!-- je change de nom à cette class(trois fois dans le CSS), la mise en page ne fonctionne plus. J'ai des envies de meurtre.-->
+  <a href="<?php echo URL_SITE ?>admin/index.php">Retour à l'accueil</a>
+  <a href="<?php echo URL_SITE ?>admin/admin_user/modifier_user.php">Ajouter un user</a>
 </div>
 
-formulaire qui affiche les données des users (tableau) et permet d'envoyer des requetes de
-modification
-+ suppression
-+ ajout (même que la modification mais non pre-rempli) à la bdd
 <?php
 
 $tableUser = $bdd -> query("SELECT * FROM user")-> fetchAll();?>
@@ -55,3 +51,5 @@ $tableUser = $bdd -> query("SELECT * FROM user")-> fetchAll();?>
   ?>
 
 </table>
+
+<?php include "../../template/include/footer.php";

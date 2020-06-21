@@ -29,7 +29,7 @@ proteger_page();
         <p>Choisir une autre image pour la page d'accueil :</p>
         <input name="imageAccueil" type="file"  accept="image/jpeg image/png" />
 
-        <input type="submit" value="Envoyer"/>
+        <input type="submit" value="Envoyer"/><br>
 
         <a href="<?php echo URL_SITE ?>admin/index.php" class="button">Retour à l'accueil de l'admin</a>
 

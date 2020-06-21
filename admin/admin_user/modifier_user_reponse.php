@@ -35,6 +35,7 @@ if(!empty($_POST)) {
               ":mdp" =>  $_POST["mdp"],
             ]
         );
+
 var_dump($query->errorinfo());
         $userID = $_POST["id_user"];
 

@@ -21,43 +21,42 @@
 
 ?>
 
-  <main>
-    <div class="container">
-        <!-- <h1> #echo MontrerValeur("TITRE_ACCUEIL")?></h1> changer titre avec ça à l'occasion -->
-      <h1>Mes projets...en ordre d'apparition</h1>
-<!--A FAIRE si id_techno existe dans le post, afficher les projets correspondants à cet id. Sinon, les afficher comme dessous (voir boutons techno en bas et réflechir à une solution)-->
-        <?php foreach(tousLesProjets() as $projet) {
+  <main class="page_projets">
 
-          echo "<div class='vitrine'><h2>";
-          echo html_a($projet["nom_projet"], URL_SITE . "projet_seul.php?projetAAfficher=$projet[id_projet]");
-
-          echo "</h2><div class='aff  ichage_techno'>$projet[technos]</div>";
-
-          echo html_image("$projet[url_image]", "img_pt");
-
-          echo "</div>";
-        }
-
-
-        ?>
-        <form class="" action="index.html" >
-
-</form>
-    <div class="liste_techno">
+    <aside class="liste_techno">
       <h3>Ou selectionnez une technologie pour voir les projets</h3>
-      <ul>
 
+      <ul>
         <?php foreach( tousLesTechno() as $techno ) {
-            echo "<form action='techno_reponse.php' method='post'><input type='hidden' name='id_techno'></form>";
+            echo "<form action='projets_par_techno.php' method='post'><input type='hidden' name='id_techno'></form>";
             echo "<li>";
-            echo html_a($techno["nom_techno"], "template/techno_reponse.php?technoAAfficher=$techno[id_techno]");
+            echo html_a($techno["nom_techno"], "projets_par_techno.php?technoAAfficher=$techno[id_techno]");
             echo "</li>";
         }
-
         ?>
       </ul>
-    </div>
+    </aside>
+
+    <div class="">
+
+      <h1>Mes projets</h1>
+
+      <?php foreach(tousLesProjets() as $projet) {
+
+        echo "<div class='vitrine'><h2>";
+        echo html_a($projet["nom_projet"], URL_SITE . "projet_seul.php?projetAAfficher=$projet[id_projet]");
+
+        echo "</h2><div class='affichage_techno'>$projet[technos]</div>";
+
+        echo html_image("$projet[url_image]", "img_pt");
+
+        echo "</div>";
+      }
+
+
+      ?>
+
   </div>
 
 
-  <?php include "include/footer.php"; ?>
+  <?php include "template/include/footer.php"; ?>

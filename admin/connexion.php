@@ -28,9 +28,9 @@ include "include/entete_admin.php";
 <div class="box_connect">
     <h1>Se connecter</h1>
     <form method="post" action="connexion_reponse.php">
-        <input type="text" name="pseudo" placeholder="Votre pseudo">
+        <input type="text" name="identifiant" placeholder="Votre pseudo">
         <br>
-        <input type="password" name="mdp" placeholder="Mot de passe">
+        <input type="mdp" name="mdp" placeholder="Mot de passe">
         <br><br>
         <input type="submit">
     </form>

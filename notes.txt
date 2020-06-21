@@ -1,3 +1,21 @@
+<div style="display: flex;">
+    <!-- Sidebar -->
+    <aside style="width: 30%;">
+        ...
+    </aside>
+
+    <!-- Main -->
+    <main style="
+        /* Take the remaining width */
+        flex: 1;
+
+        /* Make it scrollable */
+        overflow: auto;
+    ">
+        ...
+    </main>
+</div>
+
 A CORRIGER
 
 * principal - erreur /projet_seul.php
@@ -16,4 +34,4 @@ A FAIRE
 A SIGNALER
 
 - la photo de l'accueil change correctement mais parfois il faut vider le cache pour voir la nouvelle photo
-- j'ai voulu faire un template de la page qui affiche les projets par techno, mais je me suis emmelée les pinceaux avec le chemin et la nav restait bloquée dans la partie template. 
+- j'ai voulu faire un template de la page qui affiche les projets par techno, mais je me suis emmelée les pinceaux avec le chemin et la nav restait bloquée dans la partie template.
