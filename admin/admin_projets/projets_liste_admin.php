@@ -23,6 +23,7 @@ show_success();
 
         if(count($results) == 0) {
             echo "Aucun projet ! Vous pouvez en insérer un nouveau.";
+
         } else {
             echo "<ul>";
 
@@ -33,11 +34,8 @@ show_success();
                 echo "<li>$result[nom_projet] $lienModifier | $lienSupprimer</li>";
 
             }
-
             echo "</ul>";
         }
-
-
     ?>
 
 </div>

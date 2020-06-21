@@ -10,9 +10,9 @@
           <i class="fab fa-twitter-square"></i></a>
         <a href="https://www.instagram.com/" target="_blank">
           <i class="fab fa-instagram-square"></i></a>
-        <a href="https://fr.linkedin.com/" target="_blank">
+        <a href="https://www.linkedin.com/in/silvia-cecutti-9005051a9/" target="_blank">
           <i class="fab fa-linkedin"></i></a>
-          <a href="https://git-scm.com/" target="_blank">
+          <a href="https://github.com/silviacec" target="_blank">
             <i class="fab fa-git-square"></i></a>
       </div>
       
