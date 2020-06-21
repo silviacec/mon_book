@@ -4,23 +4,20 @@
 
   include "fonctions.php";
 
+  $projetAAfficher = $bdd -> query ("select nom_projet, description, url_image, annee, client, lien FROM projet WHERE id_projet = ($_GET[projetAAfficher])") -> fetch();
 
+  $technoAAfficher = $bdd -> query ("select nom_techno from techno, projet_techno, projet where techno.id_techno = projet_techno.techno_id and projet.id_projet = ($_GET[projetAAfficher]) and projet_techno.projet_id = projet.id_projet") -> fetchAll();
+  // var_dump($technoAAfficher);
 
   echo "<h1>$projetAAfficher[nom_projet]</h1>";
-// var_dump($projetAAfficher);
-echo html_image("template/img/$id_projet._1.jpg", "img_pt");
-foreach ($projetAAfficher as $id_projet) {
+
+
+
+foreach ($projetAAfficher as $key => $id_projet) {
   echo html_image("template/img/$id_projet._1.jpg", "img_pt");
   echo html_image("template/img/$id_projet._2.jpg", "img_pt");
   echo html_image("template/img/$id_projet._3.jpg", "img_pt");
 }
-
-var_dump($projetAAfficher);
-  // if($projetAAfficher = "1"){
-  //   echo html_image("template/img/1._1.jpg", "img_pt");
-  //   echo html_image("template/img/1._2.jpg", "img_pt");
-  //   echo html_image("template/img/1._3.jpg", "img_pt");
-  // }
 
   foreach ($technoAAfficher as $key => $techno) {
     echo "<div>$techno[nom_techno]<div>";
