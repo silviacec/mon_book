@@ -6,7 +6,7 @@
 
 if(empty($_POST["identifiant"]) || empty($_POST["mdp"])) {
 
-    ajouterErreur("Merci de vous connecter");
+    ajouterErreur("Merci d'insérer votre pseudo et le mot de passe !");
 
     changeDePage(URL_SITE . "admin/connexion.php");
 

@@ -32,7 +32,7 @@ if(!empty($_GET["userAAfficher"])) {
       </div>
 
       <div class="field">
-          Mot de passe<input name="mdp" placeholder="Password" type="text" value="<?php echoKey($userAModifier, "mdp")  ?>">
+          Mot de passe<input name="mdp" placeholder="Password" type="password" value="<?php echoKey($userAModifier, "mdp")  ?>">
       </div>
       <input type="submit" value="Envoyer" />
   </div>

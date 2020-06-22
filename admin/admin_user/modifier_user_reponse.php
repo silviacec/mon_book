@@ -10,12 +10,21 @@ proteger_page();
 
 if(!empty($_POST)) {
 
+
+
+
+
+
   if($_POST["id_user"] == 0) {
+
+    // $mdp = sha1(md5($_POST["mdp"]));
+    // $mdphash = crypt('mypassword');
 
     $query = $bdd -> prepare ("INSERT INTO user (identifiant, mdp) VALUES (:identifiant, :mdp)");
     $query -> execute([
         ":identifiant" => $_POST["identifiant"],
-        ":mdp" =>  $_POST["mdp"],
+        ":mdp" => $_POST["mdp"],
+        // ":mdp" =>  $mdphash,
         ]);
 
 
