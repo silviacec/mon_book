@@ -1,4 +1,4 @@
-body{
+body {
   font-family: Courier;
   background-color: #f6f3fa;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ded4ed' fill-opacity='0.81' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
@@ -23,6 +23,7 @@ body{
   /* padding-top: 120px; */
   padding-bottom: 50px;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -33,11 +34,11 @@ nav ul {
   width: 100%;
 }
 
-nav ul li{
+nav ul li {
   margin:10px;
 }
 
-nav ul li a{
+nav ul li a {
   display: block;
   padding: 10px;
   text-decoration: none;
@@ -57,7 +58,7 @@ nav ul li a{
   justify-content: space-between;
 }
 
-.container_w_aside{
+.container_w_aside {
   flex:1;
   margin:auto;
   /* overflow: auto; */
@@ -77,7 +78,7 @@ nav ul li a{
   width: 100%;
 }
 
-.liste_techno ul li a{
+.liste_techno ul li a {
   display: block;
   padding: 10px;
   text-decoration: none;
@@ -90,7 +91,7 @@ nav ul li a{
   margin: 5px 0 5px 0;
 }
 
-.liste_techno h3{
+.liste_techno h3 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -119,7 +120,7 @@ nav ul li a{
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  }
+}
 
   @-webkit-keyframes zoomIn {
   0% {
@@ -143,17 +144,17 @@ nav ul li a{
     }
   }
 
-nav ul li a:hover{
+nav ul li a:hover {
   background-color:#ccc;
   transform: scale(1.2, 1.2);
 }
 
-.bouton_admin{
+.bouton_admin {
   color: #ffffff;
   background-color: #ccc;
 }
 
-.bouton_admin:hover{
+.bouton_admin:hover {
   background-color: #ffffff;
   color: #ccc;
 }
@@ -172,7 +173,8 @@ footer {
 .social i {
   color: grey;
 }
-.social i:hover{
+
+.social i:hover {
   color: darkgrey;
 }
 
@@ -285,5 +287,4 @@ footer {
 
 .five a {
   text-decoration: none;
-
 }

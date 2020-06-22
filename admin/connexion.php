@@ -30,7 +30,7 @@ include "include/entete_admin.php";
     <form method="post" action="connexion_reponse.php">
         <input type="text" name="identifiant" placeholder="Votre pseudo">
         <br>
-        <input type="mdp" name="mdp" placeholder="Mot de passe">
+        <input type="password" name="mdp" placeholder="Mot de passe">
         <br><br>
         <input type="submit">
     </form>

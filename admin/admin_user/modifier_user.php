@@ -7,12 +7,12 @@ include "../include/entete_admin.php";
 
 proteger_page();
 
-
 if(!empty($_GET["userAAfficher"])) {
 
   $userAModifier = $bdd -> query("SELECT * from user where id_user = " . $_GET["userAAfficher"]) -> fetch();
 
 } else {
+
     $userAModifier = [];
 }
 
@@ -35,7 +35,7 @@ if(!empty($_GET["userAAfficher"])) {
           Mot de passe<input name="mdp" placeholder="Password" type="password" value="<?php echoKey($userAModifier, "mdp")  ?>">
       </div>
       <input type="submit" value="Envoyer" />
-  </div>
+    </div>
   </form>
 
   <div class="projets">

@@ -26,7 +26,6 @@ $tableUser = $bdd -> query("SELECT * FROM user")-> fetchAll();?>
     </tr>
   </thead>
 
-
   <?php
 
   if(count($tableUser) == 0) {
@@ -44,9 +43,8 @@ $tableUser = $bdd -> query("SELECT * FROM user")-> fetchAll();?>
                 <td><a href=''>$modifierUser</a></td>
                 <td><a href=''>$supprimerUser</a></td>
               </tr>";
-
       }
-}
+    }
 
   ?>
 

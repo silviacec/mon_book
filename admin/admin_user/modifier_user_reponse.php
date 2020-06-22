@@ -10,11 +10,6 @@ proteger_page();
 
 if(!empty($_POST)) {
 
-
-
-
-
-
   if($_POST["id_user"] == 0) {
 
     // $mdp = sha1(md5($_POST["mdp"]));
@@ -27,13 +22,12 @@ if(!empty($_POST)) {
         // ":mdp" =>  $mdphash,
         ]);
 
-
-      $userID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base.
+    $userID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base.
 ///ajoute dans table jointure toute les technos du $projetID --> à mettre aussi plus bas dans le modifier
-  ajouterSuccess("Vous avez ajouté un nouvel utilisateur");
-
+    ajouterSuccess("Vous avez ajouté un nouvel utilisateur");
 
     } else {// un id est envoyé alors je modifie un enregistrement.
+
         $query = $bdd -> prepare ("UPDATE user SET
                                   identifiant = :identifiant,
                                   mdp = :mdp
@@ -51,8 +45,6 @@ if(!empty($_POST)) {
 
         ajouterSuccess("Vous avez modifié ce compte utilisateur");
     }
-
-
 }
 
 changeDePage(URL_SITE . "admin/admin_user/user_liste.php");

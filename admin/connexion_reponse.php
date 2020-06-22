@@ -1,8 +1,8 @@
-<!-- traite la demande de connexion avec les POST du formulaire -->
 <?php
-    include "../config.php";
-    include "../fonctions.php";
 
+include "../config.php";
+
+include "../fonctions.php";
 
 if(empty($_POST["identifiant"]) || empty($_POST["mdp"])) {
 
@@ -21,8 +21,7 @@ if(empty($_POST["identifiant"]) || empty($_POST["mdp"])) {
         )
       );
 
-      $resultatUtilisateur = $query -> fetchAll(PDO::FETCH_ASSOC);
-
+    $resultatUtilisateur = $query -> fetchAll(PDO::FETCH_ASSOC);
 
     if(!empty($resultatUtilisateur)) {
 
@@ -30,11 +29,10 @@ if(empty($_POST["identifiant"]) || empty($_POST["mdp"])) {
 
         changeDePage("index.php");
 
-    } else {
+      } else {
 
-        ajouterErreur("L'utilisateur n'a pas été trouvé.");
-        changeDePage("connexion.php");
+          ajouterErreur("L'utilisateur n'a pas été trouvé.");
+          changeDePage("connexion.php");
 
+      }
     }
-
-}

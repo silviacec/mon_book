@@ -38,19 +38,20 @@ $tableTechno = $bdd -> query("SELECT * FROM techno")-> fetchAll();?>
   if(count($tableTechno) == 0) {
       echo "Aucune techno ! Vous pouvez insérer une nouvelle techno à partir de cette page.";
   } else {
-      foreach ($tableTechno as $techno) {
 
-        $supprimerTechno = html_a("Supprimer", URL_SITE . "admin/admin_techno/techno_supprimer.php?technoASupprimer=$techno[id_techno]", "alert", "Êtes-vous sûr de vouloir effacer cette techno ?");
+    foreach ($tableTechno as $techno) {
 
-        echo "<tr>
-                <td>$techno[nom_techno]</td>
-                <td><a href=''>$supprimerTechno</a></td>
-              </tr>";
+      $supprimerTechno = html_a("Supprimer", URL_SITE . "admin/admin_techno/techno_supprimer.php?technoASupprimer=$techno[id_techno]", "alert", "Êtes-vous sûr de vouloir effacer cette techno ?");
 
-      }
-}
+      echo "<tr>
+              <td>$techno[nom_techno]</td>
+              <td><a href=''>$supprimerTechno</a></td>
+            </tr>";
 
-  ?>
+    }
+  }
+
+?>
 
 </table>
 

@@ -26,7 +26,7 @@ if(!empty($_POST)) {
         ":ordre" =>  $_POST["ordre"],
         ]);
 
-        $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base + ajoute dans table jointure toute les technos du $projetID 
+        $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base + ajoute dans table jointure toute les technos du $projetID
 
 
         foreach ($_POST["techno"] as $key => $chaqueTechno) {
@@ -34,8 +34,8 @@ if(!empty($_POST)) {
           $query -> execute ([
             ":techno_id" => $chaqueTechno,
             ":projet_id" => $projetID,
-
           ]);
+            // $projetID = $bdd -> lastInsertId();
         }
 
 
@@ -43,6 +43,7 @@ if(!empty($_POST)) {
 
 
     } else {// un id est envoyé alors je modifie un enregistrement.
+
         $query = $bdd -> prepare ("UPDATE projet SET
                                   nom_projet = :nom_projet,
                                   description = :description,
@@ -81,20 +82,20 @@ if(!empty($_POST)) {
           $query -> execute ([
             ":techno_id" => $chaqueTechno,
             ":projet_id" => $projetID,
-
           ]);
+          // $projetID = $_POST["id_projet"];
+
         }
         ajouterSuccess("Vous avez modifié le projet $projetID");
     }
 }
-//ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet
+
 if(!empty($_FILES)) {
     enregistrerFichier($_FILES["url_image"], "template/img/$_POST[nom_projet].jpg");
 
     enregistrerFichier($_FILES["image_2"], "template/img/$_POST[nom_projet]2.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
 
     enregistrerFichier($_FILES["image_3"], "template/img/$_POST[nom_projet]3.jpg");
-
 }
 
 
