@@ -1,4 +1,4 @@
-</div>
+
 <footer>
   &copy; <?php echo NOM_DU_SITE ?>
     <?php echo date("Y") ?>
@@ -15,7 +15,7 @@
           <a href="https://github.com/silviacec" target="_blank">
             <i class="fab fa-git-square"></i></a>
       </div>
-      
+
 </footer>
 
 </body>

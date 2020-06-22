@@ -105,6 +105,10 @@ nav ul li a{
   width: auto;
 }
 
+.page_par_techno {
+  padding-top: 150px;
+}
+
 .titre_zoom {
   text-align: center;
   margin-bottom: 2em;
@@ -181,21 +185,26 @@ footer {
   display: flex;
   width: 60vw;
   margin: auto;
-  margin-bottom: 50px;
+  /* margin-top: 150px; */
   border: 1px solid #CCC;
   border-radius: 5px;
   padding: 10px;
   justify-content: space-around;
 }
 
-.vitrine h2, .vitrine p {
+.vitrine h2, .vitrine p, .vitrine h3, .vitrine h4 {
   margin-left: 10px;
   margin-right: 10px;
 }
 
+.bloc {
+  height: 200px;
+}
+
 .page_contact {
-  margin-top: 4em;
-  margin-bottom: 4em;
+  width:60%;
+  margin: auto;
+  margin-bottom: 200px;
 }
 
 .un_projet {
