@@ -26,8 +26,7 @@ if(!empty($_POST)) {
         ":ordre" =>  $_POST["ordre"],
         ]);
 
-        $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base.
-///ajoute dans table jointure toute les technos du $projetID --> à mettre aussi plus bas dans le modifier
+        $projetID = $bdd -> lastInsertId(); // Dans PHP, retourne l'identifiant de la dernière ligne insérée en base + ajoute dans table jointure toute les technos du $projetID 
 
 
         foreach ($_POST["techno"] as $key => $chaqueTechno) {
@@ -85,7 +84,7 @@ if(!empty($_POST)) {
 
           ]);
         }
-        ajouterSuccess("Vous avez modifié le projet  $projetID");
+        ajouterSuccess("Vous avez modifié le projet $projetID");
     }
 }
 //ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet

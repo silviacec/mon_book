@@ -4,10 +4,14 @@ A CORRIGER
 
 * projet_seul.php - les images ne s'affichent pas
 * admin - impossible de insérer un nouveau projet, j'ai bricolé un truc avec les url des images, mais je crois que ce n'est pas bon et que ça fait foirer tout le reste - à tester
+* changer message "merci de vous connecter en remplissant tous les champs"
 
 A FAIRE
 
-- affichage d'images des projets
 - cripter le mdp des users
-- terminer mise en page CSS
 - pagination
+
+A SIGNALER
+
+- lorsqu'on modifie un projet il faut impérativement indiquer les techno car elle s'effacent autrement et les technos du site ne sont plus indéxées
+- j'ai un souci avec les images car j'ai voulu insérer une colonne url_image dans le tableau, mais finalement elle ne me sert à rien et il faut que j' l'enleve. A ce point, je suis trop cuite pour le faire, mais je vais m'en occuper.

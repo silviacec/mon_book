@@ -147,6 +147,7 @@ nav ul li a:hover{
   background-color:#ccc;
   transform: scale(1.2, 1.2);
 }
+
 .bouton_admin{
   color: #ffffff;
   background-color: #ccc;
@@ -269,4 +270,20 @@ footer {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #ebebeb;
+}
+
+.five {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5em;
+  border: 1px solid grey ;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.five a {
+  text-decoration: none;
+
 }

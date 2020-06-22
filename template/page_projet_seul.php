@@ -4,9 +4,14 @@
 
   include "fonctions.php";
 
-  $projetAAfficher = $bdd -> query ("select nom_projet, description, url_image, annee, client, lien FROM projet WHERE id_projet = ($_GET[projetAAfficher])") -> fetch();
+  $projetAAfficher = $bdd -> query ("select nom_projet, description, url_image, annee, client, lien, ordre FROM projet WHERE id_projet = ($_GET[projetAAfficher])") -> fetch();
 
   $technoAAfficher = $bdd -> query ("select nom_techno from techno, projet_techno, projet where techno.id_techno = projet_techno.techno_id and projet.id_projet = ($_GET[projetAAfficher]) and projet_techno.projet_id = projet.id_projet") -> fetchAll();
+
+  $pageSuiv = $bdd -> query("select * from projet where ordre = $projetAAfficher[ordre] + 1 order by ordre") -> fetch();
+
+  $pagePrec = $bdd -> query("select * from projet where ordre = $projetAAfficher[ordre] - 1 order by ordre") -> fetch();
+
 ?>
 <div class="un_projet">
 
@@ -46,5 +51,20 @@
 
     ?>
     </div>
-<!-- créer une pagination avec <a>page suivante ></a> qui incrémente la valeur du paramètre de GET de la page (id_projet) d'un. Si le num n'est pas un id_projet, de deux...-->
+<!-- créer une pagination avec <a>page suivante ></a> qui incrémente la valeur du paramètre de GET -->
+    <div class='five'>
+      <?php
+      
+        if (!empty($pagePrec)) {
+          echo "<p><a href='projet_seul.php?projetAAfficher=$pagePrec[ordre]'> ⬅ </a></p>";
+        }
+
+
+        if (!empty($pageSuiv)) {
+          echo "<p><a href='projet_seul.php?projetAAfficher=$pageSuiv[ordre]'> ➡ </a></p>";
+        }
+
+      ?>
+
+    </div>
   <?php include "include/footer.php";
