@@ -17,6 +17,12 @@ if(!empty($_GET["projetAAfficher"])) {
 
 ?>
 <!-- formulaire qui affiche les données de la page projet simple et permet d'envoyer des requetes de modification + ajout (même que la modification mais non pre-rempli) à la bdd -->
+<div class="container">
+  <div class="projets">
+
+    <a href="<?php echo URL_SITE ?>admin/index.php" class="button">Revenir à l'accueil</a>
+
+  </div>
   <h1>Gestion des projets</h1>
 
   <?php
@@ -47,7 +53,7 @@ if(!empty($_GET["projetAAfficher"])) {
       foreach ($technoACocher as $key => $techno){
 
         echo $techno["nom_techno"];
-        echo "<input type='checkbox' name='techno[]' value='$techno[id_techno]'/>";
+        echo "<input type='checkbox' name='techno[]' value='$techno[id_techno]'/><br>";
       }
 
       ?>
@@ -98,9 +104,11 @@ if(!empty($_GET["projetAAfficher"])) {
 
       <input type="submit" value="Envoyer" />
 
-      <a href="<?php echo URL_SITE ?>admin/index.php" class="button">Revenir à l'accueil</a>
+
 
   </form>
+
+</div>
 
 </div>
 

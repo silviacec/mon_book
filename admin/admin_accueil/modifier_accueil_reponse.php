@@ -8,6 +8,7 @@ proteger_page();
 if(!empty($_POST)) {
   enregistreContenu("TITRE_ACCUEIL", $_POST["titre"]);
   enregistreContenu("TEXTE_ACCUEIL", $_POST["texteAccueil"]);
+  enregistreContenu("PAR_ACCUEIL", $_POST["paragrapheAccueil"]);
 }
 
 if(!empty($_FILES)) {
