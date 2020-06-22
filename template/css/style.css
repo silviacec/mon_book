@@ -181,6 +181,11 @@ footer {
   border-radius: 10px;
 }
 
+.img_md {
+  max-height: 100%;
+  width: auto;
+  border-radius: 10px;
+}
 .vitrine {
   background-color: #fffffa;
   display: flex;
@@ -210,7 +215,7 @@ footer {
 }
 
 .un_projet {
-  width: 50%;
+  width: 70%;
   margin: auto;
   text-align: center;
   padding-top: 150px;
@@ -218,6 +223,16 @@ footer {
 
 .un_projet h1 {
   font-size: 3em;
+}
+
+.zero {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #949393;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .one {

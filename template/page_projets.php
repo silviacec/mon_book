@@ -51,6 +51,7 @@
 
         echo "</h2><div class='affichage_techno'>$projet[technos]</div>";
 
+
         echo html_image("$projet[url_image]", "img_pt");
 
         echo "</div>";

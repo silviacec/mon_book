@@ -60,7 +60,7 @@ if(!empty($_GET["projetAAfficher"])) {
 
       <div class="field">
           Adresse de l'image : <input name="url_image" placeholder="Url de l'image" type="text" value="<?php echoKey($projetAModifier, "url_image")?>">
-      </div>
+      </div> 
 
       <div class="field">
           Année de création : <input name="annee" placeholder="Année" type="text"  value="<?php echoKey($projetAModifier, "annee")?>">
@@ -86,7 +86,7 @@ if(!empty($_GET["projetAAfficher"])) {
       <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
       <div class="image_admin">
 
-      <?php // ce truc devrait afficher la foto par défaut mais ne marche pas et lorsque j'ajoute des photos, le projet disparait de la liste et sur la page projet rien ne fonctionne plus :((
+      <?php
       if(!empty($_GET["projetAAfficher"])) {
           echo html_image("$projetAModifier[url_image]", "img_pt");
           }

@@ -12,14 +12,20 @@
 
   <?php
 
-    echo "<h1>$projetAAfficher[nom_projet]</h1>";
 
+
+    echo "<div class='zero'>";
     echo html_image("$projetAAfficher[url_image]", "img_pt");
 
-    echo "img/" . $projetAAfficher["nom_projet"] . "2.jpg";
+    echo html_image("template/img/" . $projetAAfficher["nom_projet"] . "2.jpg", "img_pt");
 
-    echo "img/" . $projetAAfficher["nom_projet"] . "3.jpg";
+    echo html_image("template/img/" . $projetAAfficher["nom_projet"] . "3.jpg", "img_pt");
+
+    echo "</div>";
+
+    echo "<h1>$projetAAfficher[nom_projet]</h1>";
 ?>
+
     <div class="one">
 
     <?php
