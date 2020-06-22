@@ -14,9 +14,11 @@
 
     echo "<h1>$projetAAfficher[nom_projet]</h1>";
 
+    echo html_image("$projetAAfficher[url_image]", "img_pt");
 
-    echo html_image("$projetAAfficher[url_image].jpg", "img_pt");
+    echo "img/" . $projetAAfficher["nom_projet"] . "2.jpg";
 
+    echo "img/" . $projetAAfficher["nom_projet"] . "3.jpg";
 ?>
     <div class="one">
 
@@ -25,6 +27,7 @@
       echo "$techno[nom_techno]<br>";
     }
     ?>
+
     </div>
 
     <?php

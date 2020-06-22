@@ -20,7 +20,7 @@ body{
 .container_w_aside h1 {
   color: #888888;
   text-align: center;
-  padding-top: 120px;
+  /* padding-top: 120px; */
   padding-bottom: 50px;
 }
 nav ul {
@@ -63,11 +63,12 @@ nav ul li a{
   /* overflow: auto; */
   color: #a4a7a5;
   text-align: center;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 .liste_techno {
-  margin: 200px 100px 0 100px;
+  margin: 50px 100px 0 100px;
+  width: 15%;
 }
 
 .liste_techno ul {
@@ -185,6 +186,7 @@ footer {
   display: flex;
   width: 60vw;
   margin: auto;
+  margin-bottom: 10px;
   /* margin-top: 150px; */
   border: 1px solid #CCC;
   border-radius: 5px;

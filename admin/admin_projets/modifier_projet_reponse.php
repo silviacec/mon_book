@@ -90,9 +90,11 @@ if(!empty($_POST)) {
 }
 //ce truc marche bien et les images s'enregistrent comme je souhaite, mais après je n'arrive pas à les afficher dans modifier_projet
 if(!empty($_FILES)) {
-    enregistrerFichier($_FILES["url_image"], "template/img/$projetID._1.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
-    // enregistrerFichier($_FILES["imageProjet_2"], "template/img/$projetID._2.jpg");
-    // enregistrerFichier($_FILES["imageProjet_3"], "template/img/$projetID._3.jpg");
+    enregistrerFichier($_FILES["url_image"], "template/img/$_POST[nom_projet].jpg");
+
+    enregistrerFichier($_FILES["image_2"], "template/img/$_POST[nom_projet]2.jpg"); // ici on change le chemin d'enregistrement des photos et le nom des dossiers
+
+    enregistrerFichier($_FILES["image_3"], "template/img/$_POST[nom_projet]3.jpg");
 
 }
 

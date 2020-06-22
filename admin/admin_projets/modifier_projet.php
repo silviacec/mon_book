@@ -86,20 +86,22 @@ if(!empty($_GET["projetAAfficher"])) {
       <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
       <div class="image_admin">
 
-      <?php // ce truc devrait afficher la foto par défaut mais ne marche pas...(il faudrait que toutes les photos s'appellent avec leur id_projet)
+      <?php // ce truc devrait afficher la foto par défaut mais ne marche pas et lorsque j'ajoute des photos, le projet disparait de la liste et sur la page projet rien ne fonctionne plus :((
       if(!empty($_GET["projetAAfficher"])) {
-          echo html_image("../../template/img/$_GET[projetAAfficher]._1.jpg", "mini_image");
+          echo html_image("$projetAModifier[url_image]", "img_pt");
           }
       ?>
       <div>
-      Image du projet : <input name="url_image" type="file"  accept="image/jpeg, image/png" />
+      Screenshot du projet : <input name="url_image" type="file"  accept="image/jpeg, image/png" />
       </div>
-      <!-- <div>
-      Image du projet : <input name="image_2" type="file"  accept="image/jpeg, image/png" />
-      </div>
+
       <div>
-      Image du projet : <input name="image_3" type="file"  accept="image/jpeg, image/png" />
-      </div> -->
+      Screenshot 2 : <input name="image_2" type="file"  accept="image/jpeg, image/png" />
+      </div>
+
+      <div>
+      Screenshot 3 : <input name="image_3" type="file"  accept="image/jpeg, image/png" />
+      </div>
   </div>
 
       <input type="submit" value="Envoyer" />

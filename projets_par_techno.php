@@ -6,6 +6,12 @@ include PATH_TEMPLATE . "include/header.php";
 
 include "fonctions.php";
 
+?>
+
+<div class='page_par_techno'>
+
+<?php
+
 $nom_techno = $bdd -> query("select nom_techno from techno where id_techno=$_GET[technoAAfficher]")->fetch();
 echo "<h1 class='titre_zoom'>$nom_techno[nom_techno]</h1>";
 
@@ -29,5 +35,6 @@ foreach(afficheProjetParTechno() as $projetDeCetteTechno) {
 
   echo "</div>";
 }
+?> </div>
 
- include PATH_TEMPLATE . "include/footer.php";
+<?php include PATH_TEMPLATE . "include/footer.php";

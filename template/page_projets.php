@@ -21,7 +21,9 @@
   }
 
 ?>
+  <div class="bloc">
 
+  </div>
   <main class="page_projets">
 
     <div class="liste_techno">
